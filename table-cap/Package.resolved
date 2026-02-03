@@ -1,0 +1,78 @@
+{
+  "originHash" : "a763a8543f56061dac2d81fff2631ca5d43530dfb5d1fc1d1ca94d8131345d6c",
+  "pins" : [
+    {
+      "identity" : "cadova",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tomasf/Cadova.git",
+      "state" : {
+        "revision" : "c3746cb28ff274d0931dc4c22cf90538629a3a4c",
+        "version" : "0.2.0"
+      }
+    },
+    {
+      "identity" : "findfont",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tomasf/FindFont.git",
+      "state" : {
+        "revision" : "b9b687abad56844597f4e42c5da8f7d0ef9f80d5",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "freetype-spm",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tomasf/freetype-spm.git",
+      "state" : {
+        "revision" : "93b117ac4d533090124d44180c9e648ec9e2df94",
+        "version" : "1.0.1"
+      }
+    },
+    {
+      "identity" : "manifold-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tomasf/manifold-swift.git",
+      "state" : {
+        "revision" : "8d030bc8bf11b274f7dfbc1215ad04f74098b38b",
+        "version" : "0.2.3"
+      }
+    },
+    {
+      "identity" : "nodal",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tomasf/Nodal.git",
+      "state" : {
+        "revision" : "275b8efd1d36d45154759a19e8cad709c2a36c64",
+        "version" : "0.3.3"
+      }
+    },
+    {
+      "identity" : "swift-log",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-log.git",
+      "state" : {
+        "revision" : "ce592ae52f982c847a4efc0dd881cc9eb32d29f2",
+        "version" : "1.6.4"
+      }
+    },
+    {
+      "identity" : "threemf",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tomasf/ThreeMF.git",
+      "state" : {
+        "revision" : "a7b65b1c8960602f4bc954bfc334b98c6a5e9099",
+        "version" : "0.2.0"
+      }
+    },
+    {
+      "identity" : "zip",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tomasf/Zip.git",
+      "state" : {
+        "revision" : "4f0d993ea822c313acbe6be8b0d40e7cb5e3a217",
+        "version" : "2.1.0"
+      }
+    }
+  ],
+  "version" : 3
+}
