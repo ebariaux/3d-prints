@@ -18,3 +18,10 @@ I printed this on a BambuLab P1S with wood filament.
 I did not do any postprocessing and the result looks very much like brown plastic and not wood.  
 
 ![Table cap](table-cap/table-cap.png)
+
+
+## unifi-network-adapter-support
+
+A support for attaching a [UniFi 5G Ethernet Adapter](https://eu.store.ui.com/eu/en/category/accessories-cables-dacs/collections/pro-store-ethernet-adapter/products/uacc-adapter-rj45-usbc-5ge?variant=uacc-adapter-rj45-usbc-5ge) to a [Neomounts DS75-450BL2](https://www.neomounts.com/desk/monitor-arms/ds75-450bl2-neomounts-ds75-450bl2-monitor-arm-17-32-gas-sprin/) monitor arm.
+
+![UniFi 5G Ethernet Adapter support](unifi-network-adapter-support/network-adapter-support.png)
