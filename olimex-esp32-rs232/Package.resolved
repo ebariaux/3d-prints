@@ -1,0 +1,87 @@
+{
+  "originHash" : "39755a3b33fadbe6ffc2cd68e7f6a88ba8391f377aba4cf75835b8ac70af4398",
+  "pins" : [
+    {
+      "identity" : "cadova",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tomasf/Cadova.git",
+      "state" : {
+        "revision" : "c1245865ae9cee2fadc8a267e59917d52b75f913",
+        "version" : "0.3.3"
+      }
+    },
+    {
+      "identity" : "findfont",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tomasf/FindFont.git",
+      "state" : {
+        "revision" : "b9b687abad56844597f4e42c5da8f7d0ef9f80d5",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "freetype-spm",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tomasf/freetype-spm.git",
+      "state" : {
+        "revision" : "93b117ac4d533090124d44180c9e648ec9e2df94",
+        "version" : "1.0.1"
+      }
+    },
+    {
+      "identity" : "helical",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tomasf/Helical.git",
+      "state" : {
+        "revision" : "2e4ab896a06146a9f23003d58c524a92f7cbbab5",
+        "version" : "0.4.1"
+      }
+    },
+    {
+      "identity" : "manifold-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tomasf/manifold-swift.git",
+      "state" : {
+        "revision" : "8d030bc8bf11b274f7dfbc1215ad04f74098b38b",
+        "version" : "0.2.3"
+      }
+    },
+    {
+      "identity" : "nodal",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tomasf/Nodal.git",
+      "state" : {
+        "revision" : "275b8efd1d36d45154759a19e8cad709c2a36c64",
+        "version" : "0.4.1"
+      }
+    },
+    {
+      "identity" : "swift-log",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-log.git",
+      "state" : {
+        "revision" : "bc386b95f2a16ccd0150a8235e7c69eab2b866ca",
+        "version" : "1.8.0"
+      }
+    },
+    {
+      "identity" : "threemf",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tomasf/ThreeMF.git",
+      "state" : {
+        "revision" : "d31fdea80c561b87983928b01fb8565cccde2382",
+        "version" : "0.2.2"
+      }
+    },
+    {
+      "identity" : "zip",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tomasf/Zip.git",
+      "state" : {
+        "revision" : "89a20ecc82eddf3d1cb40b55e2143167ee4367d3",
+        "version" : "2.1.1"
+      }
+    }
+  ],
+  "version" : 3
+}
