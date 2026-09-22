@@ -1,6 +1,6 @@
 import Cadova
 
-await Project {
+await Project(packageRelative: "Models") {
     await Model("lamp-support") {
         Cylinder(radius: 58, height: 5)
             .cuttingEdgeProfile(.fillet(radius: 4), on: .top)
