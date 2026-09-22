@@ -5,7 +5,7 @@ import Cadova
  * Adatper dimensions: 83.4 x 25 x 16.5 mm
  * Support has a 3.2mm deep edge
  */
-await Project {
+await Project(packageRelative: "Models") {
 
     let length = 70.0
     let height = 16.5
@@ -38,7 +38,7 @@ await Project {
     }
 }
 
-struct Clip: Shape3D {
+struct Clip: Geometry3D {
     var depth: Double
     var height: Double
     var width: Double
