@@ -10,7 +10,7 @@ await Project(packageRelative: "Models") {
 
     let ventilationSlidHeight = 13.0
     let ventilationSlidWidth = 2.0
-    let ventilationSlidSpacing = 10.0
+    let ventilationSlidSpacing = 8.0
     let ventilationSlidHOffset = 15.0
     let ventilationSlidVOffset = 7.0
     let numberOfVentilationSlids = 13
@@ -19,6 +19,9 @@ await Project(packageRelative: "Models") {
     let lidClipLength = 40.0
 
     await Model("case") {
+        let box = Part("box")
+        let lid = Part("lid")
+
         let thickness = 4.0
 
         let boardSupportHeight = 4.0
@@ -39,18 +42,16 @@ await Project(packageRelative: "Models") {
             Box(x: length, y: thickness, z: height)
                 .translated(z: thickness)
                 .subtracting {
-                    for i in 0..<numberOfVentilationSlids {
-                        Box(x: ventilationSlidWidth, y: thickness, z: ventilationSlidHeight)
-                            .translated(x: ventilationSlidHOffset + ventilationSlidSpacing * Double(i), z: ventilationSlidVOffset)
-                    }
+                    Box(x: ventilationSlidWidth, y: thickness, z: ventilationSlidHeight)
+                        .repeated(along: .x, spacing: ventilationSlidSpacing, count: numberOfVentilationSlids)
+                        .translated(x: ventilationSlidHOffset, z: ventilationSlidVOffset)
                 }
             Box(x: length, y: thickness, z: height)
                 .translated(y: width - thickness, z: thickness)
                 .subtracting {
-                    for i in 0..<numberOfVentilationSlids {
-                        Box(x: ventilationSlidWidth, y: thickness, z: ventilationSlidHeight)
-                            .translated(x: ventilationSlidHOffset + ventilationSlidSpacing * Double(i), y: width - thickness, z: ventilationSlidVOffset)
-                    }
+                    Box(x: ventilationSlidWidth, y: thickness, z: ventilationSlidHeight)
+                        .repeated(along: .x, spacing: ventilationSlidSpacing, count: numberOfVentilationSlids)
+                        .translated(x: ventilationSlidHOffset, y: width - thickness, z: ventilationSlidVOffset)
                 }
             // Short sides
             Box(x: thickness, y: width - 2 * thickness, z: height)
@@ -102,9 +103,8 @@ await Project(packageRelative: "Models") {
         .subtracting(Box(x: 14.2, y: 31, z: thickness)
             .rotated(angle: 90°, around: .positiveY)
             .translated(y: thickness, z: thickness + 14.2 + 3.0))
-    }
+        .inPart(box)
 
-    await Model("lid") {
         let lidThickness = 2.0
         let lidBorderHeight = 6.0
         let lidBorderSpacing = 4.5
@@ -113,10 +113,9 @@ await Project(packageRelative: "Models") {
             Box(x: length, y: width, z: lidThickness)
                 .cuttingEdgeProfile(.fillet(radius: lidBorderSpacing), along: .z)
                 .subtracting {
-                    for i in 0..<numberOfVentilationSlids {
-                        Box(x: ventilationSlidWidth, y: ventilationSlidHeight, z: lidThickness)
-                            .translated(x: ventilationSlidHOffset + ventilationSlidSpacing * Double(i), y: (width - ventilationSlidHeight) / 2.0)
-                    }
+                    Box(x: ventilationSlidWidth, y: ventilationSlidHeight, z: lidThickness)
+                        .repeated(along: .x, spacing: ventilationSlidSpacing, count: numberOfVentilationSlids)
+                        .translated(x: ventilationSlidHOffset, y: (width - ventilationSlidHeight) / 2.0)
                 }
 
             Box(x: length - 2 * lidBorderSpacing, y: lidThickness, z: lidBorderHeight)
@@ -130,12 +129,10 @@ await Project(packageRelative: "Models") {
 
             Box(x: lidClipLength + 1.072, y: 1.309, z: 6.0)
                 .translated(x: lidClipOffset - 1.072 / 2.0, y: lidBorderSpacing + lidThickness, z: lidThickness)
-                .cuttingEdgeProfile(.chamfer(depth: 1.309, angle: 60°), on: .verticalBackLeft)
-                .cuttingEdgeProfile(.chamfer(depth: 1.309, angle: 60°), on: .verticalBackRight)
+                .cuttingEdgeProfile(.chamfer(depth: 1.309, angle: 60°), on: [.verticalBackLeft, .verticalBackRight])
             Box(x: lidClipLength + 1.072, y: 1.309, z: 6.0)
                 .translated(x: lidClipOffset - 1.072 / 2.0, y: width - lidBorderSpacing - lidThickness - 1.309, z: lidThickness)
-                .cuttingEdgeProfile(.chamfer(depth: 1.309, angle: 60°), on: .verticalFrontLeft)
-                .cuttingEdgeProfile(.chamfer(depth: 1.309, angle: 60°), on: .verticalFrontRight)
+                .cuttingEdgeProfile(.chamfer(depth: 1.309, angle: 60°), on: [.verticalFrontLeft, .verticalFrontRight])
         }
         .subtracting {
             Box(x: lidThickness, y: 17, z: 2)
@@ -148,5 +145,8 @@ await Project(packageRelative: "Models") {
                 .translated(x: lidClipOffset - 0.2, y: width - lidBorderSpacing - 1.732, z: lidThickness - 0.1)
                 .cuttingEdgeProfile(.chamfer(depth: 3.0, angle: 30°), on: .front)
         }
+        .rotated(y: 180°)
+        .translated(x: length, z: height + thickness + lidThickness)
+        .inPart(lid)
     }
 }
