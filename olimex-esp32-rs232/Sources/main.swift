@@ -1,7 +1,6 @@
 import Cadova
-import Helical
 
-await Project {
+await Project(packageRelative: "Models") {
 
     let length = 158.0
     let width = 40.0
