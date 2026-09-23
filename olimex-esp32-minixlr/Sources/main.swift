@@ -1,7 +1,7 @@
 import Cadova
 import Helical
 
-await Project {
+await Project(packageRelative: "Models") {
 
     let length = 138.0
     let width = 37.0
@@ -97,13 +97,13 @@ await Project {
         // Screw holes
         .subtracting {
             Bolt.phillipsCountersunk(.m4, length: thickness)
-                .clearanceHole(recessedHead: true)
+                .clearanceHole(entry: .recessedHead)
                 .rotated(180°, around: .x)
                 .translated(x: 25.0, y: 15.0, z: thickness)
            }
         .subtracting {
             Bolt.phillipsCountersunk(.m4, length: thickness)
-                .clearanceHole(recessedHead: true)
+                .clearanceHole(entry: .recessedHead)
                 .rotated(180°, around: .x)
                 .translated(x: length - 25.0, y: width - 15.0, z: thickness)
            }
