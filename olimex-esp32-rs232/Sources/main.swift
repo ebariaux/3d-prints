@@ -19,6 +19,14 @@ await Project(packageRelative: "Models") {
     let lidClipLength = 40.0
 
     await Model("case") {
+        Metadata(
+            title: "Olimex case",
+            description: "Case for Olimex ESP32-POE-ISO board with MAX3232 adapter and DB-9 connector",
+            author: "Eric Bariaux",
+            license: "MIT license",
+            application: "https://github.com/ebariaux/3d-prints"
+        )
+
         let box = Part("box")
         let lid = Part("lid")
 

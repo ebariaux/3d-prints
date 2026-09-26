@@ -14,6 +14,14 @@ await Project(packageRelative: "Models") {
     let depth = 1.5
 
     await Model("network-adapter-support") {
+        Metadata(
+            title: "Network adapter support",
+            description: "A support for attaching a UniFi 5G Ethernet Adapter to a Neomounts DS75-450BL2 monitor arm",
+            author: "Eric Bariaux",
+            license: "MIT license",
+            application: "https://github.com/ebariaux/3d-prints"
+        )
+
         Union {
             Box(x: length, y: width + 2 * depth, z: depth)
 
