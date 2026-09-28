@@ -46,3 +46,10 @@ This version includes a mini-XLR connector for connecting an external sensor to 
 This version includes a DB-9 connector and enough room for a [MAX3232 adapter](https://nl.aliexpress.com/item/696400942.html) board for connecting to an RS-232 device.
 
 ![Olimex box for RS-232 connector, boards installed](olimex-esp32-rs232/olimex-rs232.png)
+
+## painters-points
+
+Supports for when I paint some items, with a base adapted for a Black&Decker Workmate workbench.
+
+![A collection of painter's points](painters-points/PaintersPoint.png)
+![Painter's points installed a an old Black&Decker Workmate workbench](painters-points/PaintersPointOnBench.png)
