@@ -53,3 +53,9 @@ Supports for when I paint some items, with a base adapted for a Black&Decker Wor
 
 ![A collection of painter's points](painters-points/PaintersPoint.png)
 ![Painter's points installed a an old Black&Decker Workmate workbench](painters-points/PaintersPointOnBench.png)
+
+## table-tags
+
+As a true geek, I wanted to decorate the table in style with these retro-computing inspired napkin rings and glass tags.
+
+![](table-tags/TableTags.png)
