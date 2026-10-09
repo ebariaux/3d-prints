@@ -1,13 +1,13 @@
 {
-  "originHash" : "5df1b2ca7dce448a59f16b67f130d06b5e4db09d3946a1d5f716979ad713f192",
+  "originHash" : "5dab290549bb0eebc091fa10603669504cde70f7c1e3eb65fe08c30e95fa6494",
   "pins" : [
     {
       "identity" : "cadova",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/tomasf/Cadova.git",
       "state" : {
-        "revision" : "9d627c61e992d4e4dc3afd4ab7369065edf96872",
-        "version" : "0.10.1"
+        "revision" : "d383959351a1ccea0add72a5bf0c3b582945112a",
+        "version" : "1.0.0"
       }
     },
     {
@@ -15,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/tomasf/Helical.git",
       "state" : {
-        "revision" : "3c1b0fab766dd1af4f499582dd64923c28b93cff",
-        "version" : "1.0.5"
+        "revision" : "e7e494b3c6baae182fe2b1a4c3669b5d2d63b920",
+        "version" : "1.1.0"
       }
     }
   ],
